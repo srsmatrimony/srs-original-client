@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import defaultProfilePic from '../images/avatar/defaultProfilePic.png';
 
 const SingleProfileDashboard = (props) => {
     const {
@@ -20,7 +21,7 @@ const SingleProfileDashboard = (props) => {
     
   return (
     <div className="dz-review-bx" >
-          <img className="dz-media me-4" src={profilePic} alt="profile-pic" />
+          <img className="dz-media me-4" src={profilePic || defaultProfilePic} alt="profile-pic" />
           <div className="dz-info">
               <div className="dz-name mb-3">
                   <div>

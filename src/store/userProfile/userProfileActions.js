@@ -13,26 +13,19 @@ export const getUserProfile = createAsyncThunk(
         const config = {
                 headers: {
                     'authorization': `Bearer ${token}`
-                }
+            }
+            
         }
         
         
         try {
-            var newUserProfile = null;
+            const profileData = { email };
             
-            // console.log(token1);
+            const { data } = await axios.post(Constants.url_user_profile, profileData, config);
+            
 
-            const { data } = await axios.get(Constants.url_profiles, config);
-            
             if (data) {
-                newUserProfile = data.find(profile => profile.email === email);
-                  
-                if (newUserProfile) {
-                    return newUserProfile
-                }
-                else {
-                    return null;
-                }
+                return data;
             }
             else {
                 return null;

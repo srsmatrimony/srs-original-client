@@ -1,4 +1,4 @@
-const baseurl = "http://localhost:5000";
+const baseurl = "https://srs-original-server.onrender.com";
 const Constants = {
   appname: "SRS",
   baseurl: baseurl,
@@ -12,6 +12,7 @@ const Constants = {
   
   /// profile
   url_profiles: baseurl + "/api/profile/profiles",
+  url_user_profile: baseurl + "/api/profile/profiles/user-profile",
   url_profile_pic: baseurl + "/api/profile/profiles/profile-pic",
   url_image1: baseurl + "/api/profile/profiles/image1",
   url_image2: baseurl + "/api/profile/profiles/image2",

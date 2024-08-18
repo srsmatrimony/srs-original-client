@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import defaultProfilePic from '../images/avatar/defaultProfilePic.png';
 
 const SingleProfileList = (props) => {
    const {
@@ -25,7 +26,7 @@ const SingleProfileList = (props) => {
                   <div className="col-md-5 col-xxl-12">
                      <div className="new-arrival-product mb-4 mb-xxl-4 mb-md-0">
                         <div className="new-arrivals-img-contnent">
-                           <img className="img-fluid rounded" src={profilePic} alt="Profile Pic" style={{width:"300px" , height:"350px" ,objectFit:"cover"}} />
+                              <img className="img-fluid rounded" src={profilePic || defaultProfilePic} alt="Profile Pic" style={{ width: "300px", height: "350px", objectFit: "cover" }} />
                         </div>
                      </div>
                   </div>
